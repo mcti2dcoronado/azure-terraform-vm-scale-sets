@@ -19,7 +19,7 @@ variable "owner"{
 
 variable "env"{
   type        = string
-  description =  "Deployment environment of the application, workload, or service"
+  description = "Deployment environment of the application, workload, or service"
   default     = "lab"
 }
 
@@ -38,7 +38,7 @@ variable "name" {
 variable "convention" {
   type        = string
   description = "Define naming convention"
-  default     = "rg-${name}-${owner}-${env}-${region}"
+  default     = "${name}-${owner}-${env}-${region}"
 }
 variable "resource_group_name" {
    description  = "Name of the resource group in which resources will be created"
